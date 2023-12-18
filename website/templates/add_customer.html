@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}Add A New Customer{% endblock %}
+
+{% block content %}
+<h1>This is the add customer page.</h1>
+
+<form method="POST" action="{{ url_for('views.add_customer') }}">
+    {{ form.hidden_tag() }}
+    <label for="name">Customer Name:</label>
+    {{ form.name() }}<br>
+    <label for="email">Email Address:</label>
+    {{ form.email() }}<br>
+    <label for="phone">Phone Number:</label>
+    {{ form.phone() }}<br>
+    {{ form.add() }}
+</form>
+
+{% endblock %}

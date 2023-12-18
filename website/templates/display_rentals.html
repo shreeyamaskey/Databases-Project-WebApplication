@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %}Display Rentals{% endblock %}
+
+{% block content %}
+<table class="display">
+    <tr>
+        <th>RentalId</th>
+        <th>BookId</th>
+        <th>Name of Book</th>
+        <th>CustomerId</th>
+        <th>Name of Customer</th>
+        <th>Rented Date</th>
+        <th>Return Date</th>
+        <th>Been Returned?</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>
+            {{ result[0] }}
+        </td>
+        <td>
+            {{ result[1] }}
+        </td>
+        <td>
+            {{ result[2] }}
+        </td>
+        <td>
+            {{ result[3] }}
+        </td>
+        <td>
+            {{ result[4] }}
+        </td>
+        <td>
+            {{ result[5] }}
+        </td>
+        <td>
+            {{ result[6] }}
+        </td>
+        <td>
+            {{ result[7] }}
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

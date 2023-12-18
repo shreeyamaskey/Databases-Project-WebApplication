@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %}Delete Book{% endblock %}
+
+{% block content %}
+<div class="update">
+    <h3>Delete the book that is not available in the library anymore.</h3>
+
+    <form method="POST" action="{{ url_for('views.delete') }}" onsubmit="showDeleteMessage()">
+        {{ form.hidden_tag() }}
+        <label for="id">Book ID:</label>
+        {{ form.id() }}<br>
+        {{ form.delete() }}
+    </form>
+</div>
+
+<script>
+    function showDeleteMessage() {
+        alert("Book deleted successfully!");  // You can customize this message
+    }
+</script>
+{% endblock %}

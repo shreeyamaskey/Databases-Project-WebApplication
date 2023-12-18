@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Update Rental Information{% endblock %}
+
+{% block content %}
+<div class="update">
+    <h3>Update the book that has been returned.</h3>
+
+    <form method="POST" action="{{ url_for('views.update_rental') }}" onsubmit="showUpdateMessage()">
+        {{ form.hidden_tag() }}
+        <label for="id">Rental ID:</label>
+        {{ form.id() }}<br>
+        <label for="beenReturned">Been Returned?:</label>
+        {{ form.beenReturned() }}<br>
+        {{ form.update() }}
+    </form>
+</div>
+
+<script>
+    function showUpdateMessage() {
+        alert("Rental information successfully updated!");  // You can customize this message
+    }
+</script>
+{% endblock %}

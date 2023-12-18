@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}Customer Checkout{% endblock %}
+
+{% block content %}
+
+<div class="receipt">
+    <h3>Customer successfully checked out. Here is the receipt.</h3>
+
+    {% for result in results %}
+        <p><strong>Date:</strong> {{ result[2] }}</p> 
+        <p><strong>Customer's name:</strong> {{ result[1] }}</p>
+        <p><strong>Book rented:</strong> {{ result[0] }}</p>
+        <p><strong>Total price:</strong> {{ result[3] }}</p>
+        <p><strong>Return date:</strong> {{ result[4] }}</p>
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}

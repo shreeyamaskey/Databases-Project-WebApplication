@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="buttons">
+    <button onclick="location.href='{{ url_for('views.display_books') }}'">Display All Books</button>
+    <button onclick="location.href='{{ url_for('views.customer_checkout') }}'">Customer Checkout</button>
+    <button onclick="location.href='{{ url_for('views.update_rental') }}'">Update Rental Information</button>
+    <button onclick="location.href='{{ url_for('views.display_rentals') }}'">Display All Rentals</button>
+    <button onclick="location.href='{{ url_for('views.genre_report') }}'">Genre Report</button>
+    <button onclick="location.href='{{ url_for('views.delete') }}'">Delete Books</button>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,119 @@
+body {
+    background-color: aliceblue;
+}
+
+/* Navbar */
+
+nav #navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5em 1em;
+}
+
+nav #navbar .nav-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    align-items: center;
+}
+
+nav #navbar .nav-nav a:hover{
+    text-decoration: none;
+    color: white;
+    text-decoration: solid;
+}
+
+.bg-dark {
+    background-color: rgb(51, 52, 58) !important;
+}
+
+.logo {
+    color: aliceblue;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+.buttons button {
+    height: 4em;
+    font-size: 17pt;
+    margin-top: 2em;
+    background-color: rgb(51, 52, 58);
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+.display {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.display td, th {
+    border: 2px solid black;
+    padding: 0.5em;
+}
+
+.display .header td{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.customer_checkout {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.customer_checkout button {
+    width: 18em;
+    padding: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 3em;
+    background-color: rgb(51, 52, 58);
+    color: white;
+}
+
+.customer_checkout form {
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 70%;
+}
+
+.customer_checkout form input#checkout {
+    background-color: rgb(51, 52, 58);
+    color: white;
+    padding: 0.5em;
+}
+
+.receipt, .update  {
+    padding-top: 2em;
+}
+
+.receipt h3, .update h3 {
+    padding-bottom: 1em;
+}
+
+.receipt p {
+    font-size: 14pt;
+}

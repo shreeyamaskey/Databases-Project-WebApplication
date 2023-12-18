@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block title %}Customer Checkout{% endblock %}
+
+{% block content %}
+
+<div class="customer_checkout">
+
+    <button onclick="location.href='{{ url_for('views.add_customer') }}'">Add A Customer</button>
+
+    <h3>Enter the rental purchase information</h3>
+    <form method="POST" action="{{ url_for('views.customer_checkout') }}">
+        {{ form.hidden_tag() }}
+        <label for="customer_id">Customer ID:</label>
+        {{ form.customer_id() }}<br>
+        <label for="book_id">Book ID:</label>
+        {{ form.book_id() }}<br>
+        <label for="rented_date">Rented Date:</label>
+        {{ form.rented_date() }}<br>
+        <label for="return_date">Return Date:</label>
+        {{ form.return_date() }}<br>
+        <label for="been_returned">Been Returned?</label>
+        {{ form.been_returned() }}<br>
+        {{ form.checkout() }}
+
+    </form>
+
+</div>
+
+
+{% endblock %}

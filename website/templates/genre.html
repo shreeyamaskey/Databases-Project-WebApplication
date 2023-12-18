@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Genre Report{% endblock %}
+
+{% block content %}
+<div class="update">
+    <h3>Report on the Genre types</h3>
+
+    <table class="display">
+        <tr>
+            <th>Genre Name</th>
+            <th>Number of Books</th>
+    
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>
+                {{ result[0] }}
+            </td>
+            <td>
+                {{ result[1] }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
